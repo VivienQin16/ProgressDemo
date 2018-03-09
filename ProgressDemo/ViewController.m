@@ -20,14 +20,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    self.title = @"TEST";
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(kWidthPro(240),
                                                                   kWidthPro(700 + 50 - 230),
                                                                   kWidthPro(1162 - 480),
                                                                   kWidthPro(120))];
     button.layer.cornerRadius = kWidthPro(60.f);
     button.layer.borderWidth = 1.f;
-//    button.text = @"下一步";
     [button setTitle:@"下一步" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor  greenColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -38,8 +37,7 @@
 - (void)btnClicked
 {
     DJ35ConsumptiveItemsVC *itemVC = [[DJ35ConsumptiveItemsVC alloc]init];
-    [self presentViewController:itemVC animated:YES completion:nil];
-//    [self.navigationController pushViewController:itemVC animated:YES];
+    [self.navigationController pushViewController:itemVC animated:YES];
 }
 
 

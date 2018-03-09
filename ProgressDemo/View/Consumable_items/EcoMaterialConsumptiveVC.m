@@ -22,7 +22,7 @@
     [self.view addSubview:self.wholeView];
     WS(ws);
     [self.wholeView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(ws.view);
+        make.edges.mas_equalTo(ws.contentView);
     }];
     
     NSArray *titleArr = [[NSArray alloc]initWithObjects:NSLocalizedString(@"SideBrush", nil),NSLocalizedString(@"Brush", nil),NSLocalizedString(@"Hepa", nil),nil];
@@ -44,7 +44,6 @@
 
 
 }
-
 
 #pragma mark —— 视图初始化
 - (EcoComsumableItemsView *)wholeView
